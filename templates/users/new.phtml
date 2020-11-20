@@ -1,0 +1,16 @@
+<form action="<?= $formAction; ?>" method="post">
+  <p>
+    <input type="text" name="user[nickname]" placeholder="Nickname" value="<?= htmlspecialchars($nickname); ?>" required/>
+  </p>
+  <p>
+    <input type="email" name="user[email]" placeholder="Email" value="<?= htmlspecialchars($email); ?>" required/>
+  </p>
+  <p>
+    <button type="submit">Save</button>
+  </p>
+</form>
+<?php foreach ($messages as $messagesStatus) : ?>
+  <?php foreach ($messagesStatus as $message) : ?>
+    <p><?= $message; ?></p>
+  <? endforeach; ?>
+<? endforeach; ?>

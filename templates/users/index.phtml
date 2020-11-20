@@ -1,0 +1,14 @@
+<form method="<?= $formAction; ?>">
+  <input type="search" name="userName"/>
+  <button type="submit">Search</button>
+</form>
+<ul>
+  <?php foreach ($users as $user) : ?>
+  <li><?= htmlspecialchars($user['nickname']); ?> / <?= htmlspecialchars($user['email']); ?></li>
+  <?php endforeach; ?>
+</ul>
+<?php foreach ($messages as $messagesStatus) : ?>
+  <?php foreach ($messagesStatus as $message) : ?>
+    <p><?= $message; ?></p>
+  <? endforeach; ?>
+<? endforeach; ?>
